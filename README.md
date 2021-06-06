@@ -1,4 +1,4 @@
-A portfolio that showcases my top skills and projects using JavaScript, SASS, and HTML5 that is responsive and mobile-friendly.
+A portfolio that showcases my top skills and projects using SASS, and HTML5 that is responsive and mobile-friendly.
 
 It is built with the lastest CSS features, proper CSS file architecture, and BEM (Block-Element-Modifier) methodology for CSS class naming convention for better component reusibily and project scalibility.
 
