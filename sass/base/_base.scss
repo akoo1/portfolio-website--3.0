@@ -1,0 +1,12 @@
+
+*,
+*:before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* With this property, width/height = padding + border + content. Adding padding and border will only shrink 
+  the content, so the total width and height still match the specified width and height.  */
+  box-sizing: border-box;
+}
+
+

@@ -1,0 +1,8 @@
+
+.section-about {
+  height: 95vh;
+  background-color: $color-grey-light-1;
+  padding: 10rem 14rem;
+  // To cover the clip path triangle between the header and section-about
+  margin-top: -20vh;
+}

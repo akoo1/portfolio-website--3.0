@@ -1,0 +1,33 @@
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba($color-primary-purple, 0.8), rgba($color-primary-blue, 0.8)), 
+    url(../images/hero.jpg);
+  /* This makes the bg image responsive, adapt to the view width */
+  background-size: cover;
+  /* This makes the bg image responsive based on the center of the image (by default it's based on the top) */
+  background-position: center;
+  /* This will keep the area inside these 4 coordinates */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+
+  &__logo {
+    position: absolute;
+    top: 1.25rem;
+    left: 2.5rem;
+  
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $color-white;
+  }
+  
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+}

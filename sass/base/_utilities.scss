@@ -1,0 +1,40 @@
+
+// The purpose of defining utility CSS classes is to keep our components independent and reuseable 
+// across the website and other projects.
+.u-center-text {
+  text-align: center;
+}
+.mb-sm {
+  margin-bottom: 1rem;
+}
+.mb-med {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 5rem;
+}
+.ml-sm {
+  margin-left: 1rem;
+}
+.ml-med {
+  margin-left: 3rem;
+}
+.ml-lg {
+  margin-left: 5rem;
+}
+
+.flex-dir-row {
+  display: flex;
+}
+.flex-dir-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-perfect-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.col-50 {
+  width: 50%;
+}

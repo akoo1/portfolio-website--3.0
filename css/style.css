@@ -1,8 +1,188 @@
-/*
-COLORS:
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-6.25rem); }
+  80% {
+    transform: translateX(0.6rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 100; } }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(6.25rem); }
+  80% {
+    transform: translateX(-0.6rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 100; } }
 
-*/
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem); }
+  80% {
+    transform: translateY(-0.3rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 100; } }
+
+*,
+*:before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* With this property, width/height = padding + border + content. Adding padding and border will only shrink 
+  the content, so the total width and height still match the specified width and height.  */
+  box-sizing: border-box; }
+
+body {
+  /* The second font is the alternative in case the first font doesn't work */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  /* This adds some white space around the whole webpage */
+  padding: 1.9rem; }
+
+.heading-primary {
+  color: #fff;
+  margin-bottom: 2rem; }
+  .heading-primary--main {
+    font-size: 3.75rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    /* This makes the initial property values in keyframe apply during delay */
+    animation-fill-mode: backwards;
+    /* 
+      animation-iteration-count: 3;
+      animation-timing-function: ease-in-out;
+    */ }
+  .heading-primary--sub {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.9rem;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; }
+
+.heading-secondary {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #7551f7, #809dff);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewX(15deg) skewY(0.5deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-third {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.mb-sm {
+  margin-bottom: 1rem; }
+
+.mb-med {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 5rem; }
+
+.ml-sm {
+  margin-left: 1rem; }
+
+.ml-med {
+  margin-left: 3rem; }
+
+.ml-lg {
+  margin-left: 5rem; }
+
+.flex-dir-row {
+  display: flex; }
+
+.flex-dir-col {
+  display: flex;
+  flex-direction: column; }
+
+.flex-perfect-center {
+  justify-content: center;
+  align-items: center; }
+
+.col-50 {
+  width: 50%; }
+
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in-out; }
+  .btn:hover {
+    transform: translateY(-0.2rem);
+    /* x, y, blur, color  */
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.3); }
+  .btn:active {
+    transform: translateY(-0.06rem);
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3); }
+  .btn--white {
+    background-color: white;
+    color: #777; }
+  .btn--animated {
+    animation-name: moveInBottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-fill-mode: backwards; }
+
+.composition__photo {
+  width: 30%; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(127, 112, 245, 0.8), rgba(14, 160, 255, 0.8)), url(../images/hero.jpg);
+  /* This makes the bg image responsive, adapt to the view width */
+  background-size: cover;
+  /* This makes the bg image responsive based on the center of the image (by default it's based on the top) */
+  background-position: center;
+  /* This will keep the area inside these 4 coordinates */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo {
+    position: absolute;
+    top: 1.25rem;
+    left: 2.5rem;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff; }
+  .header__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%; }
+
+.section-about {
+  height: 95vh;
+  background-color: #f7f7f7;
+  padding: 10rem 14rem;
+  margin-top: -20vh; }
